@@ -1,9 +1,10 @@
 import { ArrowRight, BadgeCheck, BookOpen, Gift, Share2, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import BannerCard from '../BannerCard/BannerCard.jsx'
+import BannerFooter from '../BannerCard/BannerFooter.jsx'
 import BannerVisual from '../BannerVisual/BannerVisual.jsx'
 import styles from './ReferEarnBanner.module.css'
-import referralArtwork from '../../../images/refer-earn-banner.png'
+import referralArtwork from '../../../images/Referral.jpeg'
 
 export default function ReferEarnBanner() {
   return (
@@ -33,31 +34,19 @@ export default function ReferEarnBanner() {
           className={styles.visual}
           src={referralArtwork}
           alt="Two connected profiles share an invite around a reward gift"
+          width={521}
+          height={415}
+          loading="eager"
         />
       </div>
-      <div className={styles.benefitStrip} aria-label="Referral program highlights">
-        <div className={styles.benefitItem}>
-          <span className={styles.benefitIcon}><Share2 size={16} aria-hidden="true" /></span>
-          <span className={styles.benefitCopy}>
-            <strong>Easy to share</strong>
-            <small>Send your referral link</small>
-          </span>
-        </div>
-        <div className={styles.benefitItem}>
-          <span className={styles.benefitIcon}><BadgeCheck size={16} aria-hidden="true" /></span>
-          <span className={styles.benefitCopy}>
-            <strong>Clear eligibility</strong>
-            <small>Program criteria apply</small>
-          </span>
-        </div>
-        <div className={styles.benefitItem}>
-          <span className={styles.benefitIcon}><Gift size={16} aria-hidden="true" /></span>
-          <span className={styles.benefitCopy}>
-            <strong>Referral rewards</strong>
-            <small>For eligible referrals</small>
-          </span>
-        </div>
-      </div>
+      <BannerFooter
+        label="Referral program highlights"
+        items={[
+          { icon: Share2, title: 'Easy sharing', detail: 'Send your referral link' },
+          { icon: BadgeCheck, title: 'Clear criteria', detail: 'Program criteria apply' },
+          { icon: Gift, title: 'Earn rewards', detail: 'For eligible referrals' },
+        ]}
+      />
     </BannerCard>
   )
 }

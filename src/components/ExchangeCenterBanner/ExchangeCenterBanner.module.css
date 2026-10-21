@@ -1,8 +1,10 @@
 .card {
-  --banner-wash: rgba(119, 98, 165, .15);
   --banner-accent: #d5c9ec;
   --banner-accent-rgb: 148, 127, 191;
   --banner-border: linear-gradient(125deg, rgba(165, 146, 213, .3), rgba(255, 255, 255, .05) 55%, rgba(201, 181, 123, .18));
+  --banner-cta-background: linear-gradient(115deg, #706399, #81749d);
+  --banner-cta-hover-background: linear-gradient(115deg, #8273ae, #9484af);
+  --banner-cta-border: rgba(209, 193, 238, .42);
 }
 
 .main { min-width: 0; }
@@ -12,31 +14,7 @@
 .text { position: relative; }
 .cta { position: relative; }
 
-.card .title { max-width: 13ch; color: #f3f4f8; }
+.card .title { max-width: 15ch; color: #f3f4f8; }
 .title span { color: #cbb7f1; }
 
-.visual {
-  --art-max-width: 100%;
-  --art-float-delay: -2s;
-  grid-template-columns: minmax(0, 1fr);
-  background: radial-gradient(ellipse at 54% 53%, rgba(113, 94, 163, .13), transparent 67%);
-}
-
-.artNote {
-  position: absolute;
-  z-index: 2;
-  bottom: 5%;
-  left: 3%;
-  padding: 6px 9px;
-  border: 1px solid rgba(193, 180, 224, .2);
-  border-radius: 7px;
-  background: rgba(23, 25, 40, .9);
-  color: #d2cadf;
-  font-size: .61rem;
-  line-height: 1.25;
-}
-
-@media (max-width: 599px) {
-  .visual { min-height: 0; }
-  .artNote { bottom: 4%; font-size: .53rem; }
-}
+.visual { --art-max-width: 520px; }

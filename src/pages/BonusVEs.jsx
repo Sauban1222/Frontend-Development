@@ -30,8 +30,14 @@ function BonusVEsPage() {
   useEffect(() => {
     if (!dailySpinPending || dailySpinPending.date !== today || spunToday) return undefined
     setSpinning(true)
+    const targetRotation = getWheelRotationForReward(dailySpinPending.reward)
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setWheelRotation(targetRotation)
+      completeDailySpin()
+      setSpinning(false)
+      return undefined
+    }
     setWheelRotation((current) => {
-      const targetRotation = getWheelRotationForReward(dailySpinPending.reward)
       const currentRotation = ((current % 360) + 360) % 360
       const extraRotation = (targetRotation - currentRotation + 360) % 360
       return current + 2160 + extraRotation

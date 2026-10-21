@@ -4,7 +4,7 @@ import BannerCard from '../BannerCard/BannerCard.jsx'
 import BannerFooter from '../BannerCard/BannerFooter.jsx'
 import BannerVisual from '../BannerVisual/BannerVisual.jsx'
 import styles from './SwapCenterBanner.module.css'
-import swapArtwork from '../../../images/swap-center-banner.png'
+import swapArtwork from '../../../images/Swap Center.jpeg'
 
 function SwapCenterBanner() {
   return (
@@ -24,17 +24,17 @@ function SwapCenterBanner() {
         <BannerVisual
           className={styles.visual}
           src={swapArtwork}
-          alt="Illustration of VE and voucher balances being converted with swap arrows"
-        >
-          <span className={styles.artNote} aria-hidden="true">Illustrative balances · not live data</span>
-        </BannerVisual>
+          alt="Illustration of two reward balances being converted with swap arrows"
+          width={529}
+          height={384}
+        />
       </div>
       <BannerFooter
         label="Swap details"
         items={[
-          { icon: RefreshCw, title: 'Supported balances', detail: 'Available conversion options vary' },
-          { icon: BadgeCheck, title: 'Review before confirming', detail: 'Check details before a swap' },
-          { icon: Info, title: 'Illustrative rates', detail: 'Banner values are not live' },
+          { icon: RefreshCw, title: 'Choose balances', detail: 'See supported options' },
+          { icon: BadgeCheck, title: 'Review details', detail: 'Check before confirming' },
+          { icon: Info, title: 'Preview rates', detail: 'Illustrative values only' },
         ]}
       />
     </BannerCard>

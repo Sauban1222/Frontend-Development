@@ -1,41 +1,69 @@
 .visual {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  border-radius: 18px;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+}
+
+.visual::before {
+  position: absolute;
+  width: min(88%, 420px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(var(--banner-accent-rgb, 124, 150, 220), .14), transparent 69%);
+  content: '';
+  pointer-events: none;
 }
 
 .artwork {
+  position: relative;
   display: block;
-  width: min(100%, var(--art-max-width, 100%));
+  width: min(100%, var(--art-max-width, 540px));
+  height: auto;
   max-height: 100%;
   object-fit: contain;
   mix-blend-mode: lighten;
-  filter: saturate(.9) contrast(1.02);
-  animation:
-    artwork-reveal .72s cubic-bezier(.2, .7, .25, 1) .08s both,
-    artwork-drift 8s ease-in-out var(--art-float-delay, 0s) infinite;
-  transition: filter .4s ease;
+  animation: artwork-enter .65s ease-out both, artwork-float 6.4s ease-in-out .65s infinite;
+  backface-visibility: hidden;
+  transform-origin: center;
+  will-change: transform;
 }
 
-.visual:hover .artwork {
-  filter: saturate(.98) contrast(1.04) brightness(1.01);
-}
+.visual > :not(.artwork) { z-index: 1; }
 
-@keyframes artwork-reveal {
+@keyframes artwork-enter {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes artwork-drift {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(0, -4px, 0) scale(1.008); }
+@keyframes artwork-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -5px, 0); }
+}
+
+@media (min-width: 900px) {
+  .artwork {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: clamp(310px, calc(32vw - 120px), 330px);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .artwork { width: min(100%, 250px); }
 }
 
 @media (max-width: 599px) {
-  .visual { border-radius: 13px; }
+  .visual { padding-top: 0; }
+  .artwork { width: min(100%, 230px); }
+}
+
+@media (max-width: 359px) {
+  .artwork { width: min(100%, 195px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .artwork { animation: none; transition: none; }
+  .artwork { animation: none; will-change: auto; }
 }

@@ -11,4 +11,8 @@
   --color-accent-soft: #e0d2a6;
   --color-focus: #e4cc8b;
   --color-shadow: rgba(5, 7, 17, .2);
+  --motion-duration-fast: 160ms;
+  --motion-duration: 220ms;
+  --motion-duration-enter: 420ms;
+  --motion-ease-standard: cubic-bezier(.2, .7, .25, 1);
 }

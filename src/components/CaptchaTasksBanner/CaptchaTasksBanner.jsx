@@ -4,7 +4,7 @@ import BannerCard from '../BannerCard/BannerCard.jsx'
 import BannerFooter from '../BannerCard/BannerFooter.jsx'
 import BannerVisual from '../BannerVisual/BannerVisual.jsx'
 import styles from './CaptchaTasksBanner.module.css'
-import captchaArtwork from '../../../images/captcha-tasks-banner.png'
+import captchaArtwork from '../../../images/Captcha .jpeg'
 
 function CaptchaTasksBanner() {
   return (
@@ -24,17 +24,17 @@ function CaptchaTasksBanner() {
         <BannerVisual
           className={styles.visual}
           src={captchaArtwork}
-          alt="Captcha verification interface with a security shield and a reward gift"
-        >
-          <span className={styles.artNote} aria-hidden="true">Illustrative interface · not a live task</span>
-        </BannerVisual>
+          alt="Illustrative CAPTCHA task interface and verification shield"
+          width={545}
+          height={395}
+        />
       </div>
       <BannerFooter
         label="Captcha task details"
         items={[
           { icon: Keyboard, title: 'Accuracy matters', detail: 'Follow each task instruction' },
-          { icon: Clock3, title: 'Tasks vary', detail: 'Availability may change' },
-          { icon: ShieldCheck, title: 'Preview only', detail: 'Artwork is not a live task' },
+          { icon: Clock3, title: 'One at a time', detail: 'Complete tasks in sequence' },
+          { icon: ShieldCheck, title: 'Preview task', detail: 'Artwork is illustrative' },
         ]}
       />
     </BannerCard>

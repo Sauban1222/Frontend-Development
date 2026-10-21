@@ -59,7 +59,7 @@
   color: #a1a4b2;
   font-size: 13px;
   font-weight: 600;
-  transition: color .2s ease;
+  transition: color var(--motion-duration) ease, background var(--motion-duration) ease;
 }
 .navLink:hover, .navActive { color: #e0d2a6; }
 .navActive::after {
@@ -106,14 +106,24 @@
 .content {
   width: min(100% - 64px, 1216px);
   margin: 0 auto;
-  animation: workspaceEnter .48s cubic-bezier(.2, .7, .25, 1) both;
+  animation: workspaceEnter var(--motion-duration-enter) var(--motion-ease-standard) both;
 }
 .breadcrumb { display: flex; align-items: center; gap: 10px; padding: 27px 0 18px; color: #828697; font-size: 12px; }
 .breadcrumb a { color: #b1b3c0; }
 .breadcrumb a:hover { color: var(--accent); }
 .breadcrumb [aria-current] { color: #d4d5dd; }
 .pageHeader { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
-.previewNotice { margin: -12px 0 22px; color: #b6b8c5; font-size: 12px; line-height: 1.5; }
+.previewNotice {
+  margin: -12px 0 22px;
+  padding: 10px 13px;
+  border: 1px solid rgba(180, 154, 255, .13);
+  border-left: 2px solid rgba(180, 154, 255, .55);
+  border-radius: 8px;
+  background: rgba(180, 154, 255, .035);
+  color: #b6b8c5;
+  font-size: 12px;
+  line-height: 1.5;
+}
 .featureIcon { display: grid; width: 48px; height: 48px; flex: 0 0 auto; place-items: center; border: 1px solid rgba(var(--accent-rgb), .23); border-radius: 14px; background: rgba(var(--accent-rgb), .09); color: var(--accent); }
 .headerCopy { min-width: 0; }
 .eyebrow, .kicker { color: #989baa; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }

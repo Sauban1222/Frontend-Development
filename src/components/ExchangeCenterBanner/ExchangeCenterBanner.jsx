@@ -4,7 +4,7 @@ import BannerCard from '../BannerCard/BannerCard.jsx'
 import BannerFooter from '../BannerCard/BannerFooter.jsx'
 import BannerVisual from '../BannerVisual/BannerVisual.jsx'
 import styles from './ExchangeCenterBanner.module.css'
-import exchangeArtwork from '../../../images/exchange-center-banner.png'
+import exchangeArtwork from '../../../images/Rewards banner.jpeg'
 
 function ExchangeCenterBanner() {
   return (
@@ -24,17 +24,17 @@ function ExchangeCenterBanner() {
         <BannerVisual
           className={styles.visual}
           src={exchangeArtwork}
-          alt="Wallet and VE coins lead toward redemption options"
-        >
-          <div className={styles.artNote} aria-hidden="true">Illustrative artwork · preview balances are not live</div>
-        </BannerVisual>
+          alt="Illustration of a reward balance beside redemption choices"
+          width={491}
+          height={404}
+        />
       </div>
       <BannerFooter
         label="Redemption details"
         items={[
-          { icon: Gem, title: 'Explore options', detail: 'Available rewards may vary' },
-          { icon: Wallet, title: 'Check VE needs', detail: 'Review requirements first' },
-          { icon: ShieldCheck, title: 'Preview balances', detail: 'Artwork values are illustrative' },
+          { icon: Gem, title: 'Browse options', detail: 'Explore reward choices' },
+          { icon: Wallet, title: 'Check VE needs', detail: 'Review requirements' },
+          { icon: ShieldCheck, title: 'Review first', detail: 'Before confirming' },
         ]}
       />
     </BannerCard>

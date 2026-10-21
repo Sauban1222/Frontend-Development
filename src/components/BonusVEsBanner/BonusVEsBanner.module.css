@@ -1,8 +1,10 @@
 .card {
-  --banner-wash: rgba(166, 128, 58, .14);
   --banner-accent: #e3d09b;
   --banner-accent-rgb: 194, 158, 89;
   --banner-border: linear-gradient(125deg, rgba(216, 187, 118, .3), rgba(255, 255, 255, .05) 55%, rgba(151, 132, 92, .18));
+  --banner-cta-background: linear-gradient(115deg, #947641, #a58a51);
+  --banner-cta-hover-background: linear-gradient(115deg, #a8894b, #b79b5e);
+  --banner-cta-border: rgba(234, 211, 158, .44);
 }
 
 .main { min-width: 0; }
@@ -13,8 +15,4 @@
 .cta { position: relative; }
 
 .title span { color: #e5cc8e; }
-.visual { --art-float-delay: -5s; background: radial-gradient(ellipse at 52% 52%, rgba(154, 116, 46, .12), transparent 67%); }
-
-@media (max-width: 599px) {
-  .visual { padding-top: 0; }
-}
+.visual { --art-max-width: 500px; }

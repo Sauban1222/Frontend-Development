@@ -4,7 +4,7 @@ import BannerCard from '../BannerCard/BannerCard.jsx'
 import BannerFooter from '../BannerCard/BannerFooter.jsx'
 import BannerVisual from '../BannerVisual/BannerVisual.jsx'
 import styles from './BonusVEsBanner.module.css'
-import bonusArtwork from '../../../images/bonus-ves-banner.png'
+import bonusArtwork from '../../../images/Earn VEs.jpeg'
 
 function BonusVEsBanner() {
   return (
@@ -25,14 +25,16 @@ function BonusVEsBanner() {
           className={styles.visual}
           src={bonusArtwork}
           alt="Premium gift box surrounded by gold VE coins and a bonus opportunity panel"
+          width={565}
+          height={429}
         />
       </div>
       <BannerFooter
         label="Bonus activity details"
         items={[
-          { icon: CalendarCheck, title: 'Check activities', detail: 'Browse available opportunities' },
-          { icon: BadgeCheck, title: 'Review criteria', detail: 'Requirements vary by activity' },
-          { icon: Gift, title: 'Rewards vary', detail: 'See terms before you begin' },
+          { icon: CalendarCheck, title: 'Find activities', detail: 'Browse current options' },
+          { icon: BadgeCheck, title: 'Check criteria', detail: 'Requirements vary' },
+          { icon: Gift, title: 'Review terms', detail: 'Before you begin' },
         ]}
       />
     </BannerCard>
