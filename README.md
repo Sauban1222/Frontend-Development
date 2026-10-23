@@ -60,7 +60,7 @@ All interactions and balances are examples for demonstration purposes. No real t
 
 ```bash
 # Clone the repository
-git clone https://github.com/Sauban1222/Aurex-Rewards.git
+git clone https://github.com/Sauban1222/Frontend-Development.git
 cd Aurex-Rewards
 
 # Install dependencies
@@ -274,7 +274,7 @@ Aurex Rewards works on all modern browsers:
 
 The application is deployed on **Netlify** with automatic SPA fallback.
 
-**Live Demo:** https://aurexreward-s.netlify.app/
+**Live Demo:** https://aurex-reward-s.netlify.app/
 
 ### Netlify Configuration
 
@@ -285,7 +285,7 @@ The `netlify.toml` file includes:
 
 ### GitHub Repository
 
-**Repository:** https://github.com/Sauban1222/Aurex-Rewards
+**Repository:** https://github.com/Sauban1222/Frontend-Development
 
 To deploy your own instance:
 
